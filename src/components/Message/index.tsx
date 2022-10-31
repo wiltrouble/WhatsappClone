@@ -29,10 +29,16 @@ export default Message;
 
 const styles = StyleSheet.create({
   container: {
+<<<<<<< HEAD
+=======
+    // backgroundColor: 'white',
+    // alignSelf: 'flex-start',
+>>>>>>> 6680a9df0ee27845958a441595d755d59189bb56
     margin: 5,
     padding: 10,
     borderRadius: 10,
     maxWidth: '80%',
+<<<<<<< HEAD
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -42,6 +48,8 @@ const styles = StyleSheet.create({
     shadowRadius: 2.62,
 
     elevation: 1,
+=======
+>>>>>>> 6680a9df0ee27845958a441595d755d59189bb56
   },
   time: {
     color: 'gray',
