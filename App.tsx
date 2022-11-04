@@ -4,14 +4,13 @@ import ChatListItem from './src/components/ChatListItem'
 import chats from './src/assets/data/chats.json'
 import ChatsScreen from './src/screens/ChatsScreen'
 import ChatScreen from './src/screens/ChatScreen'
+import Navigator from './src/navigation'
 
 const chat1 = chats[3]
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <ChatScreen />
-    </View>
+    <Navigator />
   )
 }
 
