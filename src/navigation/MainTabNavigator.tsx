@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {ActionSheetIOS, StyleSheet, Text, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -9,6 +9,7 @@ import ChatScreen from '../screens/ChatScreen';
 import NotImplementedScreen from '../screens/NotImplementedScreen';
 import ChatsScreen from '../screens/ChatsScreen';
 import ChatsRightIcons from '../components/ChatsRightIcons';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 const Tab = createBottomTabNavigator();
@@ -17,13 +18,13 @@ const MainTabNavigator = () => {
   return (
     <Tab.Navigator
       initialRouteName="Chats"
-      screenOptions={{
+      screenOptions={({navigation}) => ({
         tabBarStyle: {backgroundColor: 'whitesmoke'},
         headerStyle: {backgroundColor: 'whitesmoke'},
         headerRight: () => (
-          <ChatsRightIcons />
+          <ChatsRightIcons navigation={navigation}/>
         )
-      }} >
+      })} >
       <Tab.Screen
         name="Status"
         component={NotImplementedScreen}
@@ -80,3 +81,14 @@ const MainTabNavigator = () => {
 export default MainTabNavigator;
 
 const styles = StyleSheet.create({});
+
+
+// 29
+
+// 2 anios
+
+// 3574
+
+// 375
+
+// 30
