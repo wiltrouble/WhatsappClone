@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {StyleSheet, Text, TextInput, View} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import PlusIcon from 'react-native-vector-icons/Fontisto';
 import SendIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -11,7 +12,7 @@ const InputBox = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['bottom']}>
       <PlusIcon name="plus-a" size={40} color="royalblue" />
       <TextInput
         placeholder="type your message"
@@ -26,7 +27,7 @@ const InputBox = () => {
         style={styles.send}
         onPress={onSend}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

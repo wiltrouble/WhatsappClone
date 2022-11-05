@@ -10,7 +10,7 @@ const Navigator = () => {
   const Stack = createNativeStackNavigator()
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerStyle: { backgroundColor: 'whitesmoke'}}}>
         <Stack.Screen name='Home' component={MainTabNavigator} options={{headerShown: false}} />
         <Stack.Screen name='Chat' component={ChatScreen}/>
       </Stack.Navigator>
