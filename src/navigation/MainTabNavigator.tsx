@@ -1,15 +1,13 @@
-import {ActionSheetIOS, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Feather from 'react-native-vector-icons/Feather';
 
-import ChatScreen from '../screens/ChatScreen';
 import NotImplementedScreen from '../screens/NotImplementedScreen';
 import ChatsScreen from '../screens/ChatsScreen';
 import ChatsRightIcons from '../components/ChatsRightIcons';
-import { NavigationContainer } from '@react-navigation/native';
+import SettingsScreen from '../screens/SettingsScreen'
 
 
 const Tab = createBottomTabNavigator();
@@ -67,7 +65,7 @@ const MainTabNavigator = () => {
       />
       <Tab.Screen
         name="Settings"
-        component={NotImplementedScreen}
+        component={SettingsScreen}
         options={{
           tabBarIcon: ({color, size}:any) => (
             <AntDesign name="setting" size={size} color={color} />

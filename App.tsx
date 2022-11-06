@@ -5,7 +5,7 @@ import { Amplify } from 'aws-amplify'
 import { withAuthenticator } from 'aws-amplify-react-native'
 import awsconfig from './src/aws-exports'
 
-Amplify.configure(awsconfig)
+Amplify.configure({...awsconfig, Analytics: {disabled: true}})
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingVertical: 50
+    backgroundColor: 'whitesmoke'
   }
 })
 
