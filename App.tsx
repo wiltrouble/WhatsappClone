@@ -1,25 +1,26 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import ChatListItem from './src/components/ChatListItem'
-import chats from './src/assets/data/chats.json'
-import ChatsScreen from './src/screens/ChatsScreen'
-import ChatScreen from './src/screens/ChatScreen'
+import { StatusBar, StyleSheet, View } from 'react-native'
 import Navigator from './src/navigation'
+import { Amplify } from 'aws-amplify'
+// @ts-ignore
+import { withAuthenticator } from 'aws-amplify-react-native'
+import awsconfig from './src/aws-exports'
 
-const chat1 = chats[3]
+Amplify.configure({...awsconfig, Analytics: {disabled: true}})
 
 const App = () => {
   return (
-    <Navigator />
+    <View style={styles.container}>
+      <Navigator />
+    </View>
   )
 }
-
-export default App
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingVertical: 50
+    backgroundColor: 'whitesmoke'
   }
 })
+
+export default withAuthenticator(App)

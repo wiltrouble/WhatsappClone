@@ -1,5 +1,4 @@
 import { StyleSheet, FlatList } from 'react-native'
-import React from 'react'
 
 import chats from '../../src/assets/data/chats.json';
 import ContactListItem from '../components/ContactListItem';
