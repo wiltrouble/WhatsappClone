@@ -42,7 +42,7 @@ const MainTabNavigator = () => {
         name="Calls"
         component={NotImplementedScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color, size}:any) => (
             <Ionicons name="md-call-outline" size={size} color={color} />
           ),
         }}
@@ -51,7 +51,7 @@ const MainTabNavigator = () => {
         name="Community"
         component={NotImplementedScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color, size}:any) => (
             <Ionicons name="people-outline" size={size} color={color} />
           ),
         }}
@@ -60,7 +60,7 @@ const MainTabNavigator = () => {
         name="Chats"
         component={ChatsScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color, size}:any) => (
             <Ionicons name="md-chatbubbles-outline" size={size} color={color} />
           ),
         }}
@@ -69,7 +69,7 @@ const MainTabNavigator = () => {
         name="Settings"
         component={NotImplementedScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color, size}:any) => (
             <AntDesign name="setting" size={size} color={color} />
           ),
         }}
